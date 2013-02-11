@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'ak_google_avail'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+      <label index="tt_content.list_type_pi1">Google Verfügbarkeitskalender</label>
+      <label index="pi_flexform.sheet_general">Allgemein</label>
+      <label index="pi_flexform.mode_single">Einzelansicht</label>
+      <label index="pi_flexform.mode_multiple">Mehrfachansicht</label>
+		</languageKey>
+	</data>
+</T3locallang>
