@@ -71,6 +71,7 @@
                 <size>10</size>
                 <multiple>1</multiple>
               </config>
+              <displayCond>FIELD:mode:=:multiple</displayCond>
             </TCEforms>
           </pages>
           <urls>

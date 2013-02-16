@@ -153,9 +153,9 @@ class tx_akgoogleavail_pi1 extends tslib_pibase {
   <table>
     <tr>
       <td class="vacant day">&nbsp;</td>
-      <th>frei</th>
+      <th>frei</td>
       <td class="booked day">&nbsp;</td>
-      <th>belegt</th>
+      <th>belegt</td>
     </tr>
   </table>
 </div>
