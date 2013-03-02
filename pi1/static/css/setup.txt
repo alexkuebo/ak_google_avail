@@ -1,0 +1,54 @@
+plugin.tx-akgoogleavail-pi1._CSS_DEFAULT_STYLE (
+  .tx-akgoogleavail-pi1 .day {
+      height: 18px;
+      text-align: center;
+      width: 18px;
+  }
+  .tx-akgoogleavail-pi1 .vacant {
+      background-color: #F8F6F3;
+  }
+  .tx-akgoogleavail-pi1 .booked {
+      background-color: #E48E8D;
+      text-decoration: line-through;
+  }
+  .tx-akgoogleavail-pi1 .arrival, .tx-akgoogleavail-pi1 .departure {
+      background-color: #F8F6F3;
+      background-size: 100% 100%;
+  }
+  .tx-akgoogleavail-pi1 .arrival {
+      background-image: url("/typo3conf/ext/ak_google_avail/res/bookingstart.gif");
+      text-decoration: line-through;
+  }
+  .tx-akgoogleavail-pi1 .departure {
+      background-image: url("/typo3conf/ext/ak_google_avail/res/bookingend.gif");
+  }
+  .tx-akgoogleavail-pi1 .month {
+      border: 1px solid #754A15;
+      float: left;
+      margin: 0.5em;
+  }
+  .tx-akgoogleavail-pi1 .legend {
+      border: 1px solid #754A15;
+      margin: 0.5em;
+      width: 300px;
+  }
+  .tx-akgoogleavail-pi1 .monthname {
+      background-color: #DBCAB3;
+      text-align: center;
+  }
+  .tx-akgoogleavail-pi1 br.clear {
+      clear: both;
+  }
+  .tx-akgoogleavail-pi1 .legend th {
+      text-align: left;
+      width: 100px;
+  }
+  .tx-akgoogleavail-pi1 .name {
+      width: 200px;
+  }
+  .tx-akgoogleavail-pi1 td.wday {
+      font-size: 80%;
+      padding: 0;
+      text-align: center;
+  }
+)
