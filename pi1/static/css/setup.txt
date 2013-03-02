@@ -1,4 +1,7 @@
 plugin.tx-akgoogleavail-pi1._CSS_DEFAULT_STYLE (
+  .tx-akgoogleavail-pi1 {
+    background-color: #E7D9C5;
+  }
   .tx-akgoogleavail-pi1 .day {
       height: 18px;
       text-align: center;

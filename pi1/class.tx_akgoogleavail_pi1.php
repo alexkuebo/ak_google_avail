@@ -27,30 +27,30 @@ require_once('class.iCalReader.php');
 require_once('class.daystatus.php');
 
 /**
- * Plugin 'Google Kalender Monatsübersicht' for the 'ak_google_avail' extension.
+ * Plugin 'Availability calendar' for the 'ak_google_avail' extension.
  *
- * @author	Alexander Kruth <kruth@bfpi.de>
- * @package	TYPO3
- * @subpackage	tx_akgoogleavail
+ * @author      Alexander Kruth <kruth@bfpi.de>
+ * @package     TYPO3
+ * @subpackage  tx_akgoogleavail
  */
 class tx_akgoogleavail_pi1 extends tslib_pibase {
-	public $prefixId      = 'tx_akgoogleavail_pi1';		// Same as class name
-	public $scriptRelPath = 'pi1/class.tx_akgoogleavail_pi1.php';	// Path to this script relative to the extension dir.
-	public $extKey        = 'ak_google_avail';	// The extension key.
-	public $pi_checkCHash = TRUE;
-	
-	/**
-	 * The main method of the Plugin.
-	 *
-	 * @param string $content The Plugin content
-	 * @param array $conf The Plugin configuration
-	 * @return string The content that is displayed on the website
-	 */
-	public function main($content, array $conf) {
-		$this->conf = $conf;
-		$this->pi_setPiVarDefaults();
+  public $prefixId      = 'tx_akgoogleavail_pi1';    // Same as class name
+  public $scriptRelPath = 'pi1/class.tx_akgoogleavail_pi1.php';  // Path to this script relative to the extension dir.
+  public $extKey        = 'ak_google_avail';  // The extension key.
+  public $pi_checkCHash = TRUE;
+  
+  /**
+   * The main method of the Plugin.
+   *
+   * @param string $content The Plugin content
+   * @param array $conf The Plugin configuration
+   * @return string The content that is displayed on the website
+   */
+  public function main($content, array $conf) {
+    $this->conf = $conf;
+    $this->pi_setPiVarDefaults();
     $this->pi_loadLL();
-	
+  
     $this->pi_initPIflexForm();
     $content = "";
     switch($this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'mode')) {
@@ -62,8 +62,8 @@ class tx_akgoogleavail_pi1 extends tslib_pibase {
       break;
     }
 
-		return $this->pi_wrapInBaseClass($content);
-	}
+    return $this->pi_wrapInBaseClass($content);
+  }
 
   function singleMode() {
     $url = $this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'url');
@@ -78,8 +78,8 @@ class tx_akgoogleavail_pi1 extends tslib_pibase {
       $now->modify("+1 month");
     }
     $content .= '<br class="clear"/>';
-		return $content;
-	}
+    return $content;
+  }
 
   function multipleMode() {
     $params = t3lib_div::_GET($this->prefixId);
@@ -279,10 +279,8 @@ EOT;
   }
 }
 
-
-
-if (defined('TYPO3_MODE') && isset($GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/ak_google_avail/pi1/class.tx_akgoogleavail_pi1.php'])) {
-	include_once($GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/ak_google_avail/pi1/class.tx_akgoogleavail_pi1.php']);
+if(defined('TYPO3_MODE') && isset($GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/ak_google_avail/pi1/class.tx_akgoogleavail_pi1.php'])) {
+  include_once($GLOBALS['TYPO3_CONF_VARS'][TYPO3_MODE]['XCLASS']['ext/ak_google_avail/pi1/class.tx_akgoogleavail_pi1.php']);
 }
 
 ?>
