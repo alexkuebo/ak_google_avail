@@ -1,0 +1,3 @@
+ * Review documentation
+ * Make all strings translatable
+ * Check ext_emconf.php
