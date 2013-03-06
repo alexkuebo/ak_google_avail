@@ -38,7 +38,7 @@ class tx_akgoogleavail_pi1 extends tslib_pibase {
   public $scriptRelPath = 'pi1/class.tx_akgoogleavail_pi1.php';  // Path to this script relative to the extension dir.
   public $extKey        = 'ak_google_avail';  // The extension key.
   public $pi_checkCHash = TRUE;
-  
+
   /**
    * The main method of the Plugin.
    *
@@ -50,7 +50,7 @@ class tx_akgoogleavail_pi1 extends tslib_pibase {
     $this->conf = $conf;
     $this->pi_setPiVarDefaults();
     $this->pi_loadLL();
-  
+
     $this->pi_initPIflexForm();
     $content = "";
     switch($this->pi_getFFvalue($this->cObj->data['pi_flexform'], 'mode')) {
@@ -153,9 +153,9 @@ class tx_akgoogleavail_pi1 extends tslib_pibase {
   <table>
     <tr>
       <td class="vacant day">&nbsp;</td>
-      <th>frei</td>
+      <th>{$this->pi_getLL('vacant')}</th>
       <td class="booked day">&nbsp;</td>
-      <th>belegt</td>
+      <th>{$this->pi_getLL('booked')}</th>
     </tr>
   </table>
 </div>
@@ -173,9 +173,9 @@ EOT;
   function drawMonth($start, $bookedDays) {
     $date = clone $start;
     $ret = '<div class="month">
-        <h3 class="monthname">' . $this->formatFullMonth($date) .'</h3>
-        <table>
-        <tr>';
+      <h3 class="monthname">' . $this->formatFullMonth($date) .'</h3>
+      <table>
+      <tr>';
     for($i = 1; $i <= 7; $i++) {
       $ret .= '<th>'. $this->pi_getLL('wday_'. $i) .'</th>';
     }
@@ -185,10 +185,10 @@ EOT;
       for($wday = 1; $wday <= 7; $wday++) {
         // Wochentag stimmt mit Spalte überein und Monat ist der gewünschte
         if(intval($date->format('N')) == $wday && 
-            $date->format('n') == $start->format('n')) {
-          $ret .= $this->drawDay($date, $bookedDays);
-          $date->modify("+1 day");
-        }
+          $date->format('n') == $start->format('n')) {
+            $ret .= $this->drawDay($date, $bookedDays);
+            $date->modify("+1 day");
+          }
         else {
           $ret .= "<td></td>";
         }
@@ -201,21 +201,21 @@ EOT;
 
   function drawDay(&$date, &$bookedDays) {
     $class = "day ";
-    $title = "Frei";
+    $title = $this->pi_getLL('title_vacant');
     $dateStr = $date->format("Y-m-d");
     if(array_key_exists($dateStr, $bookedDays)) {
       switch($bookedDays[$dateStr]) {
       case DayStatus::BOOKED:
         $class .= "booked";
-        $title = "Belegt";
+        $title = $this->pi_getLL('title_booked');
         break;
       case DayStatus::ARRIVAL:
         $class .= "arrival";
-        $title = "Anreisetag";
+        $title = $this->pi_getLL('title_arrival');
         break;
       case DayStatus::DEPARTURE:
         $class .= "departure";
-        $title = "Abreisetag";
+        $title = $this->pi_getLL('title_departure');
         break;
       }
     }

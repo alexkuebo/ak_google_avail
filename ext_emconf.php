@@ -12,7 +12,8 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'Availability calendar',
-	'description' => 'Displays one or more availability calendars where the source of the data is an iCalendar/ics file, for example from Google.',
+  'description' => 'Displays one or more availability calendars where the source of the data is an iCalendar/ics file, for example from Google.
+Source and issue tracker: https://github.com/alexkuebo/ak_google_avail',
 	'category' => 'plugin',
 	'author' => 'Alexander Kruth',
 	'author_email' => 'kruth@bfpi.de',

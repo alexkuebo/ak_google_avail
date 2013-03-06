@@ -7,13 +7,13 @@
     <sDEF>
       <ROOT>
         <TCEforms>
-          <sheetTitle>LLL:EXT:ak_google_avail/locallang_db.php:pi_flexform.sheet_general</sheetTitle>
+          <sheetTitle>LLL:EXT:ak_google_avail/locallang_db.xml:pi_flexform.sheet_general</sheetTitle>
         </TCEforms>
         <type>array</type>
         <el>
           <mode>
             <TCEforms>
-              <label>Modus</label>
+              <label>LLL:EXT:ak_google_avail/locallang_db.xml:pi_flexform.mode</label>
               <config>
                 <type>select</type>
                 <default>0</default>
@@ -37,7 +37,7 @@
           </mode>
           <url>
             <TCEforms>
-              <label>Kalender-URL (ICS)</label>
+              <label>LLL:EXT:ak_google_avail/locallang_db.xml:pi_flexform.url</label>
               <config>
                 <type>input</type>
                 <size>200</size>
@@ -49,7 +49,7 @@
           </url>
           <names>
             <TCEforms>
-              <label>Kalenderbezeichnungen (eine pro Zeile)</label>
+              <label>LLL:EXT:ak_google_avail/locallang_db.xml:pi_flexform.cal_names</label>
               <config>
                 <type>text</type>
                 <cols>60</cols>
@@ -61,7 +61,7 @@
           <pages>
             <TCEforms>
               <exclude>1</exclude>
-              <label>Link-Zielseiten</label>
+              <label>LLL:EXT:ak_google_avail/locallang_db.xml:pi_flexform.link_targetpages</label>
               <config>
                 <type>group</type>
                 <internal_type>db</internal_type>
@@ -76,7 +76,7 @@
           </pages>
           <urls>
             <TCEforms>
-              <label>Kalender-URLs (ICS, eine pro Zeile)</label>
+              <label>LLL:EXT:ak_google_avail/locallang_db.xml:pi_flexform.urls</label>
               <config>
                 <type>text</type>
                 <cols>60</cols>

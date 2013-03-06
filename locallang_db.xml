@@ -10,6 +10,11 @@
       <label index="pi_flexform.sheet_general">Allgemein</label>
       <label index="pi_flexform.mode_single">Einzelansicht</label>
       <label index="pi_flexform.mode_multiple">Mehrfachansicht</label>
+      <label index="pi_flexform.mode">Modus</label>
+      <label index="pi_flexform.url">Kalender-URL (ICS)</label>
+      <label index="pi_flexform.cal_names">Kalenderbezeichnungen (eine pro Zeile)</label>
+      <label index="pi_flexform.link_targetpages">Link-Zielseiten</label>
+      <label index="pi_flexform.urls">Kalender-URLs (ICS, eine pro Zeile)</label>
     </languageKey>
   </data>
 </T3locallang>
