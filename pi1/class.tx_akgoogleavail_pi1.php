@@ -153,9 +153,9 @@ class tx_akgoogleavail_pi1 extends tslib_pibase {
   <table>
     <tr>
       <td class="vacant day">&nbsp;</td>
-      <th>{$this->pi_getLL('vacant')}</th>
+      <th>{$this->pi_getLL('legend_vacant')}</th>
       <td class="booked day">&nbsp;</td>
-      <th>{$this->pi_getLL('booked')}</th>
+      <th>{$this->pi_getLL('legend_booked')}</th>
     </tr>
   </table>
 </div>

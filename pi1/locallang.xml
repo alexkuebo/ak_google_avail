@@ -37,8 +37,8 @@
       <label index="wday_5">Fr</label>
       <label index="wday_6">Sa</label>
       <label index="wday_7">So</label>
-      <label index="legend_vacant">Frei</label>
-      <label index="legend_booked">Belegt</label>
+      <label index="legend_vacant">frei</label>
+      <label index="legend_booked">belegt</label>
       <label index="title_vacant">Frei</label>
       <label index="title_booked">Belegt</label>
       <label index="title_arrival">Anreisetag</label>
